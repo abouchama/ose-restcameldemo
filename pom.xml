@@ -28,7 +28,7 @@
     <docker.image>${fabric8.dockerUser}${project.artifactId}:${project.version}</docker.image>
     <docker.port.container.jolokia>8778</docker.port.container.jolokia>
 	
-	<fabric8.service.name>restcameldemo</fabric8.service.name>
+	<fabric8.service.name>ose-restcameldemo</fabric8.service.name>
     <fabric8.service.port>80</fabric8.service.port>
     <fabric8.service.containerPort>${http.port}</fabric8.service.containerPort>
     
@@ -239,6 +239,7 @@
                   <JAVA_LIB_DIR>/deployments/lib</JAVA_LIB_DIR>
                   <JAVA_MAIN_CLASS>org.apache.camel.spring.Main</JAVA_MAIN_CLASS>
                   <HTTP_PORT>${http.port}</HTTP_PORT>
+                  <A_MQ_SERVICE_NAME>amq62-amq-tcp</A_MQ_SERVICE_NAME>
                 </env>
                 <ports>
                   <port>${http.port}</port>
