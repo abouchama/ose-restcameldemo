@@ -44,7 +44,7 @@
     <setBody>
       <simple>{"custName":"${headers.custName}","geoloc":"${headers.product}"}</simple>
     </setBody>
-    <to pattern="InOnly" uri="amq:queue:REST"/>
+    <!-- to pattern="InOnly" uri="amq:queue:REST"/-->
     <setBody>
       <simple>Awesome: Welcome on Fuse Integration Service</simple>
     </setBody>

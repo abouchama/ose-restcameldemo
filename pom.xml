@@ -239,7 +239,8 @@
                   <JAVA_LIB_DIR>/deployments/lib</JAVA_LIB_DIR>
                   <JAVA_MAIN_CLASS>org.apache.camel.spring.Main</JAVA_MAIN_CLASS>
                   <HTTP_PORT>${http.port}</HTTP_PORT>
-                  <A_MQ_SERVICE_NAME>amq62-amq-tcp</A_MQ_SERVICE_NAME>
+                  <AMQ62_AMQ_TCP_USERNAME>admin</AMQ62_AMQ_TCP_USERNAME>
+				  <AMQ62_AMQ_TCP_PASSWORD>admin</AMQ62_AMQ_TCP_PASSWORD>
                 </env>
                 <ports>
                   <port>${http.port}</port>
