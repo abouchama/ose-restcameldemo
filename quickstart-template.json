@@ -8,12 +8,12 @@
       "iconClass": "icon-java"
     },
     "labels": {},
-    "name": "carddemo"
+    "name": "ose-restcameldemo"
   },
   "parameters": [
     {
       "name": "APP_NAME",
-      "value": "carddemo",
+      "value": "ose-restcameldemo",
       "description": "Application Name"
     },
     {
@@ -28,12 +28,12 @@
     },
     {
       "name": "SERVICE_NAME",
-      "value": "s2i-qs-cdi-cxf",
+      "value": "ose-restcameldemo-service",
       "description": "Exposed Service name"
     },
     {
       "name": "HTTP_PORT",
-      "value": "9092",
+      "value": "9191",
       "description": "HTTP_PORT environment variable"
     },
     {
@@ -122,7 +122,7 @@
           {
             "port": 80,
             "protocol": "TCP",
-            "targetPort": 9092
+            "targetPort": 9191
           }
         ],
         "selector": {
@@ -318,7 +318,7 @@
                 },
                 "ports": [
                   {
-                    "containerPort": 9092,
+                    "containerPort": 9191,
                     "name": "http"
                   },
                   {
