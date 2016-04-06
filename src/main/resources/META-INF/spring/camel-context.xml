@@ -25,11 +25,11 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<bean id="amqConnectionFactory" class="io.fabric8.mq.core.MQConnectionFactory">
+	<!-- bean id="amqConnectionFactory" class="io.fabric8.mq.core.MQConnectionFactory">
 		<property name="userName" value="admin"/>
 		<property name="password" value="admin"/>
 	</bean>
-	<bean id="amq" class="io.fabric8.mq.camel.AMQComponent"></bean>
+	<bean id="amq" class="io.fabric8.mq.camel.AMQComponent"></bean-->
 	
   
   <camelContext xmlns="http://camel.apache.org/schema/spring">
@@ -41,9 +41,6 @@
   </rest>
   <route id="customerTracking">
     <from uri="direct:order"/>
-    <setBody>
-      <simple>{"custName":"${headers.custName}","geoloc":"${headers.product}"}</simple>
-    </setBody>
     <!-- to pattern="InOnly" uri="amq:queue:REST"/-->
     <setBody>
       <simple>Awesome: Welcome on Fuse Integration Service</simple>

@@ -17,7 +17,8 @@
     <!-- the version of the BOM, defining all the dependency versions -->
     <fuse.version>6.2.1.redhat-084</fuse.version>
     <activemq.version>5.11.0.redhat-621084</activemq.version>
-    <fabric8.version>2.2.0.redhat-079</fabric8.version>
+    <!-- fabric8.version>2.2.0.redhat-079</fabric8.version-->
+    <fabric8.version>2.2.100</fabric8.version>
     <docker.maven.plugin.version>0.13.6</docker.maven.plugin.version>
     
     <http.port>9191</http.port>
@@ -37,6 +38,7 @@
     <fabric8.annotations.service.apiman.io.descriptionPath>cxfcdi/swagger.json</fabric8.annotations.service.apiman.io.descriptionPath>
     <fabric8.annotations.service.apiman.io.descriptionType>SwaggerJSON</fabric8.annotations.service.apiman.io.descriptionType>-->
 	<fabric8.env.A_MQ_SERVICE_NAME>amq62-amq-tcp</fabric8.env.A_MQ_SERVICE_NAME>
+	<A_MQ_SERVICE_NAME>amq62-amq-tcp</A_MQ_SERVICE_NAME>
 	
     <fabric8.label.component>${project.artifactId}</fabric8.label.component>
     <fabric8.label.container>java</fabric8.label.container>
@@ -239,8 +241,9 @@
                   <JAVA_LIB_DIR>/deployments/lib</JAVA_LIB_DIR>
                   <JAVA_MAIN_CLASS>org.apache.camel.spring.Main</JAVA_MAIN_CLASS>
                   <HTTP_PORT>${http.port}</HTTP_PORT>
-                  <AMQ62_AMQ_TCP_USERNAME>admin</AMQ62_AMQ_TCP_USERNAME>
-				  <AMQ62_AMQ_TCP_PASSWORD>admin</AMQ62_AMQ_TCP_PASSWORD>
+                  <!-- AMQ62_AMQ_TCP_USERNAME>admin</AMQ62_AMQ_TCP_USERNAME>
+				  <AMQ62_AMQ_TCP_PASSWORD>admin</AMQ62_AMQ_TCP_PASSWORD-->
+				  <A_MQ_SERVICE_NAME>amq62-amq-tcp</A_MQ_SERVICE_NAME>
                 </env>
                 <ports>
                   <port>${http.port}</port>
